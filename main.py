@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import pyttsx3
+from gtts import gTTS
+from io import BytesIO
+import os
+from playsound import playsound
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+synthesizer = pyttsx3.init()
+synthesizer.setProperty('rate', 100)
+synthesizer.say("tes satu dua tiga")
+synthesizer.runAndWait()
+synthesizer.stop()
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+'''
+mp3_fp = BytesIO()
+tts = gTTS('tes satu dua tiga', lang='en')
+tts.write_to_fp(mp3_fp)
+'''
+'''
+tts = gTTS('test satu dua tiga empat lima enam', lang='id')
+tts.save('hello.mp3')
+playsound('hello.mp3')
+'''
