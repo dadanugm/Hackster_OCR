@@ -1,0 +1,1 @@
+-- install wifi usb dongle: auto wlan0, file /etc/network/interfaces
